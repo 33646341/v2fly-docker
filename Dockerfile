@@ -5,6 +5,7 @@ WORKDIR /tmp
 ARG TARGETPLATFORM
 ARG TAG
 COPY v2ray.sh "${WORKDIR}"/v2ray.sh
+COPY v2ray.zip "${WORKDIR}"/v2ray.zip
 
 RUN set -ex \
     && apk add --no-cache ca-certificates \

@@ -5,7 +5,9 @@ WORKDIR /tmp
 ARG TARGETPLATFORM
 ARG TAG
 COPY v2ray.sh "${WORKDIR}"/v2ray.sh
-COPY v2ray.zip "${WORKDIR}"/v2ray.zip
+COPY v2ray "${WORKDIR}"/v2ray
+COPY geosite.dat "${WORKDIR}"/geosite.dat
+# COPY config.json "${WORKDIR}"/config.json
 
 RUN set -ex \
     && apk add --no-cache ca-certificates \
